@@ -15,6 +15,10 @@
 		ACE94C8E2B87BCE60098183D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C8D2B87BCE60098183D /* Storyboard.swift */; };
 		ACE94C912B87BD100098183D /* StoryboardMakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C902B87BD100098183D /* StoryboardMakeable.swift */; };
 		ACE94C932B87BE9A0098183D /* CharacterListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C922B87BE9A0098183D /* CharacterListVC.swift */; };
+		ACE94C962B87C4540098183D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C952B87C4540098183D /* EndPoint.swift */; };
+		ACE94C992B87C5380098183D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C982B87C5380098183D /* Environment.swift */; };
+		ACE94C9B2B87C5A30098183D /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C9A2B87C5A30098183D /* BaseURL.swift */; };
+		ACE94C9F2B87C62C0098183D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C9E2B87C62C0098183D /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		ACE94C8D2B87BCE60098183D /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		ACE94C902B87BD100098183D /* StoryboardMakeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardMakeable.swift; sourceTree = "<group>"; };
 		ACE94C922B87BE9A0098183D /* CharacterListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListVC.swift; sourceTree = "<group>"; };
+		ACE94C952B87C4540098183D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		ACE94C982B87C5380098183D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		ACE94C9A2B87C5A30098183D /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		ACE94C9E2B87C62C0098183D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +155,9 @@
 		ACE94C892B87BCAE0098183D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ACE94C942B87C4460098183D /* Network */,
 				ACE94C8C2B87BCD30098183D /* Storyboard */,
+				ACE94C972B87C52F0098183D /* Environment */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -159,6 +169,24 @@
 				ACE94C902B87BD100098183D /* StoryboardMakeable.swift */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		ACE94C942B87C4460098183D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94C9E2B87C62C0098183D /* API.swift */,
+				ACE94C952B87C4540098183D /* EndPoint.swift */,
+				ACE94C9A2B87C5A30098183D /* BaseURL.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ACE94C972B87C52F0098183D /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94C982B87C5380098183D /* Environment.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,10 +260,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE94C962B87C4540098183D /* EndPoint.swift in Sources */,
 				ACE94C8E2B87BCE60098183D /* Storyboard.swift in Sources */,
 				ACE94C6B2B87BB6A0098183D /* AppDelegate.swift in Sources */,
+				ACE94C992B87C5380098183D /* Environment.swift in Sources */,
 				ACE94C6D2B87BB6A0098183D /* SceneDelegate.swift in Sources */,
 				ACE94C932B87BE9A0098183D /* CharacterListVC.swift in Sources */,
+				ACE94C9B2B87C5A30098183D /* BaseURL.swift in Sources */,
+				ACE94C9F2B87C62C0098183D /* API.swift in Sources */,
 				ACE94C912B87BD100098183D /* StoryboardMakeable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +415,7 @@
 				DEVELOPMENT_TEAM = M4SYRBQBFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarvelHeros/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel Heros";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -414,6 +447,7 @@
 				DEVELOPMENT_TEAM = M4SYRBQBFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarvelHeros/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel Heros";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
