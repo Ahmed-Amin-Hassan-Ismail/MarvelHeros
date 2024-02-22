@@ -19,6 +19,11 @@
 		ACE94C992B87C5380098183D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C982B87C5380098183D /* Environment.swift */; };
 		ACE94C9B2B87C5A30098183D /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C9A2B87C5A30098183D /* BaseURL.swift */; };
 		ACE94C9F2B87C62C0098183D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94C9E2B87C62C0098183D /* API.swift */; };
+		ACE94CA22B87C6990098183D /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA12B87C6990098183D /* RxBlocking */; };
+		ACE94CA42B87C6990098183D /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA32B87C6990098183D /* RxBlocking-Dynamic */; };
+		ACE94CA62B87C6990098183D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA52B87C6990098183D /* RxCocoa */; };
+		ACE94CA82B87C6990098183D /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA72B87C6990098183D /* RxCocoa-Dynamic */; };
+		ACE94CAA2B87C6990098183D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA92B87C6990098183D /* RxRelay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE94CAA2B87C6990098183D /* RxRelay in Frameworks */,
+				ACE94CA82B87C6990098183D /* RxCocoa-Dynamic in Frameworks */,
+				ACE94CA62B87C6990098183D /* RxCocoa in Frameworks */,
+				ACE94CA22B87C6990098183D /* RxBlocking in Frameworks */,
+				ACE94CA42B87C6990098183D /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +215,13 @@
 			dependencies = (
 			);
 			name = MarvelHeros;
+			packageProductDependencies = (
+				ACE94CA12B87C6990098183D /* RxBlocking */,
+				ACE94CA32B87C6990098183D /* RxBlocking-Dynamic */,
+				ACE94CA52B87C6990098183D /* RxCocoa */,
+				ACE94CA72B87C6990098183D /* RxCocoa-Dynamic */,
+				ACE94CA92B87C6990098183D /* RxRelay */,
+			);
 			productName = MarvelHeros;
 			productReference = ACE94C672B87BB6A0098183D /* MarvelHeros.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +250,9 @@
 				Base,
 			);
 			mainGroup = ACE94C5E2B87BB6A0098183D;
+			packageReferences = (
+				ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = ACE94C682B87BB6A0098183D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -491,6 +511,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACE94CA12B87C6990098183D /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		ACE94CA32B87C6990098183D /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		ACE94CA52B87C6990098183D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		ACE94CA72B87C6990098183D /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		ACE94CA92B87C6990098183D /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACE94C5F2B87BB6A0098183D /* Project object */;
 }
