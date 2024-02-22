@@ -10,6 +10,12 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    private func setupViewController() {
+        let rootVC = SplashVC.initializeFromStoryboard()
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
+    }
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -18,8 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let WindowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: WindowScene)
-        self.window?.rootViewController = CharacterListVC.initializeFromStoryboard()
-        self.window?.makeKeyAndVisible()
+        self.setupViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

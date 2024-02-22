@@ -24,6 +24,12 @@
 		ACE94CA62B87C6990098183D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA52B87C6990098183D /* RxCocoa */; };
 		ACE94CA82B87C6990098183D /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA72B87C6990098183D /* RxCocoa-Dynamic */; };
 		ACE94CAA2B87C6990098183D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CA92B87C6990098183D /* RxRelay */; };
+		ACE94CAD2B87CA1D0098183D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = ACE94CAC2B87CA1D0098183D /* Lottie */; };
+		ACE94CB12B87CAA80098183D /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE94CB02B87CAA80098183D /* Splash.storyboard */; };
+		ACE94CB42B87CAE30098183D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94CB32B87CAE30098183D /* SplashVC.swift */; };
+		ACE94CB72B87CB9F0098183D /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94CB62B87CB9F0098183D /* SplashViewModel.swift */; };
+		ACE94CBE2B87D2F20098183D /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE94CBD2B87D2F20098183D /* Animation.json */; };
+		ACE94CC12B87D45D0098183D /* UIApplication+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE94CC02B87D45D0098183D /* UIApplication+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,11 @@
 		ACE94C982B87C5380098183D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		ACE94C9A2B87C5A30098183D /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		ACE94C9E2B87C62C0098183D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		ACE94CB02B87CAA80098183D /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		ACE94CB32B87CAE30098183D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		ACE94CB62B87CB9F0098183D /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		ACE94CBD2B87D2F20098183D /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
+		ACE94CC02B87D45D0098183D /* UIApplication+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,7 @@
 				ACE94CA62B87C6990098183D /* RxCocoa in Frameworks */,
 				ACE94CA22B87C6990098183D /* RxBlocking in Frameworks */,
 				ACE94CA42B87C6990098183D /* RxBlocking-Dynamic in Frameworks */,
+				ACE94CAD2B87CA1D0098183D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,7 @@
 		ACE94C7F2B87BB960098183D /* SupportedFiles */ = {
 			isa = PBXGroup;
 			children = (
+				ACE94CB82B87CBE30098183D /* LottieFiles */,
 				ACE94C802B87BB9D0098183D /* Assets */,
 				ACE94C812B87BBA20098183D /* LaunchScreen */,
 			);
@@ -133,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE94C842B87BC730098183D /* CharacterList */,
+				ACE94CAE2B87CA930098183D /* Splash */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -167,6 +181,7 @@
 			children = (
 				ACE94C942B87C4460098183D /* Network */,
 				ACE94C8C2B87BCD30098183D /* Storyboard */,
+				ACE94CBF2B87D4450098183D /* Extension */,
 				ACE94C972B87C52F0098183D /* Environment */,
 			);
 			path = Core;
@@ -199,6 +214,56 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
+		ACE94CAE2B87CA930098183D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94CB52B87CB970098183D /* ViewModel */,
+				ACE94CB22B87CADA0098183D /* ViewController */,
+				ACE94CAF2B87CA9C0098183D /* Storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		ACE94CAF2B87CA9C0098183D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94CB02B87CAA80098183D /* Splash.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		ACE94CB22B87CADA0098183D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94CB32B87CAE30098183D /* SplashVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ACE94CB52B87CB970098183D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94CB62B87CB9F0098183D /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACE94CB82B87CBE30098183D /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94CBD2B87D2F20098183D /* Animation.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		ACE94CBF2B87D4450098183D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ACE94CC02B87D45D0098183D /* UIApplication+EXT.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,6 +286,7 @@
 				ACE94CA52B87C6990098183D /* RxCocoa */,
 				ACE94CA72B87C6990098183D /* RxCocoa-Dynamic */,
 				ACE94CA92B87C6990098183D /* RxRelay */,
+				ACE94CAC2B87CA1D0098183D /* Lottie */,
 			);
 			productName = MarvelHeros;
 			productReference = ACE94C672B87BB6A0098183D /* MarvelHeros.app */;
@@ -252,6 +318,7 @@
 			mainGroup = ACE94C5E2B87BB6A0098183D;
 			packageReferences = (
 				ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */,
+				ACE94CAB2B87CA1D0098183D /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = ACE94C682B87BB6A0098183D /* Products */;
 			projectDirPath = "";
@@ -268,8 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE94C772B87BB6B0098183D /* LaunchScreen.storyboard in Resources */,
+				ACE94CBE2B87D2F20098183D /* Animation.json in Resources */,
 				ACE94C882B87BC900098183D /* CharacterList.storyboard in Resources */,
 				ACE94C742B87BB6B0098183D /* Assets.xcassets in Resources */,
+				ACE94CB12B87CAA80098183D /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE94CC12B87D45D0098183D /* UIApplication+EXT.swift in Sources */,
 				ACE94C962B87C4540098183D /* EndPoint.swift in Sources */,
+				ACE94CB42B87CAE30098183D /* SplashVC.swift in Sources */,
 				ACE94C8E2B87BCE60098183D /* Storyboard.swift in Sources */,
 				ACE94C6B2B87BB6A0098183D /* AppDelegate.swift in Sources */,
+				ACE94CB72B87CB9F0098183D /* SplashViewModel.swift in Sources */,
 				ACE94C992B87C5380098183D /* Environment.swift in Sources */,
 				ACE94C6D2B87BB6A0098183D /* SceneDelegate.swift in Sources */,
 				ACE94C932B87BE9A0098183D /* CharacterListVC.swift in Sources */,
@@ -521,6 +593,14 @@
 				minimumVersion = 6.6.0;
 			};
 		};
+		ACE94CAB2B87CA1D0098183D /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -548,6 +628,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ACE94CA02B87C6990098183D /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
+		};
+		ACE94CAC2B87CA1D0098183D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE94CAB2B87CA1D0098183D /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -17,6 +17,19 @@ class CharacterListVC: UIViewController {
 
 }
 
+// MARK: - Setup Navigation
+
+extension CharacterListVC {
+    
+    class func initializeWithNavigationController() -> UINavigationController {
+        
+        let nav = UINavigationController(rootViewController: CharacterListVC.initializeFromStoryboard())
+        nav.modalPresentationStyle = .fullScreen
+        
+        return nav
+    }
+}
+
 extension CharacterListVC: StoryboardMakeable {
     
     typealias StoryboardType = CharacterListVC

@@ -10,5 +10,7 @@ import Foundation
 
 enum Storyboard {
     
+    static let spalsh = "Splash"
     static let characterList = "CharacterList"
+    
 }
