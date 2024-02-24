@@ -19,4 +19,24 @@ struct Marvel {
     }
     
     
+    private static let dateFormatter: DateFormatter = {
+       let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMddHHmmss"
+        
+        return dateFormatter
+    }()
+    
+    
+    static var defaultParameters: [String: Any]? {
+        let timeStamp = dateFormatter.string(from: Date())
+        let hash = "\(timeStamp)\(Keys.privatKey)\(Keys.publicKey)".MD5
+        
+        let parameters: [String: Any]? = [
+            ParamKeys.apikey : Keys.publicKey,
+            ParamKeys.hash : hash,
+            ParamKeys.timeStamp : timeStamp,
+        ]
+        
+        return parameters
+    }
 }

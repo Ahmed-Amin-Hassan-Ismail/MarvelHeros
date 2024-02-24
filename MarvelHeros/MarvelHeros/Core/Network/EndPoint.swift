@@ -9,12 +9,12 @@ import Foundation
 
 // MARK: - HTTP Method
 
-enum HTTPMethod: String {
+enum HTTPMethod {
     
-    case get = "GET"
-    case post = "POST"
-    case put = "PUT"
-    case delete = "DELETE"
+    case get
+    case post
+    case put
+    case delete
 }
 
 // MARK: - API Encoding
@@ -40,6 +40,16 @@ struct EndPoint {
     var fullURL: String {
         
         return "\(environment.baseURL)\(path)"
+    }
+    
+    var fullParameter: [String: Any]?  {
+        
+        if let parameters {
+            
+            return Marvel.defaultParameters?.merging(parameters) { (_, new) in new }
+        }
+            
+        return Marvel.defaultParameters
     }
     
     // MARK: - Init

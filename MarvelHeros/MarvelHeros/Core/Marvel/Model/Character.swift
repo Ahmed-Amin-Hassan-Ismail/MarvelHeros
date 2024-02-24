@@ -7,18 +7,30 @@
 
 import Foundation
 
+//struct Character: Codable {
+//    var id: Int?
+//    var name: String
+//    var thumbnail: Thumbnail?
+//}
+
+
+
 // MARK: - CharacterModel
+
 struct CharacterModel: Codable {
-    let code: Int
-    let status, copyright, attributionText, attributionHTML: String
-    let etag: String
-    let data: DataClass
+    
+    var code: Int?
+    var status, copyright, attributionText, attributionHTML: String?
+    var etag: String?
+    var data: DataClass?
 }
 
 // MARK: - DataClass
+
 struct DataClass: Codable {
-    let offset, limit, total, count: Int
-    let results: [Character]
+    
+    var offset, limit, total, count: Int?
+    var results: [Character]?
 }
 
 // MARK: - Result
@@ -113,33 +125,3 @@ enum URLType: String, Codable {
     case detail = "detail"
     case wiki = "wiki"
 }
-
-//struct Character: Identifiable, Codable {
-//    let id: Int
-//    let name: String
-//    let description: String
-//    let modified: String
-//    let resourceURI: String
-//    let urls: [Url]
-//    let thumbnail: _Image
-//    let comics: ResourceList
-//    let stories: ResourceList
-//    let events: ResourceList
-//    let series: ResourceList
-//}
-//
-//struct Url: Codable {
-//    let type: String
-//    let url: String
-//}
-//
-//struct _Image: Codable {
-//    let path: String
-//    let `extension`: String
-//}
-//
-//struct ResourceList: Codable {
-//    let available: Int
-//    let collectionURI: String
-//    // Add more properties as needed
-//}

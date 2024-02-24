@@ -13,6 +13,7 @@ class CharacterListVC: UIViewController {
     // MARK: - Properties
     
     private var viewModel: CharacterListViewModel!
+    private let disposeBag = DisposeBag()
     
     // MARK: - Init
     
