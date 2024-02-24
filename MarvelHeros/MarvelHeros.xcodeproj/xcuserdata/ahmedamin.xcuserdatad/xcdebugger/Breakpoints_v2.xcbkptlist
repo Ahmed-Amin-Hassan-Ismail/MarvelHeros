@@ -3,4 +3,145 @@
    uuid = "49F72EAB-05B2-45BD-B373-5CE5EC9D3E45"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelHeros/Modules/Splash/ViewController/SplashVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "lottieAnimationView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D - 4aa765309633f6e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelHeros.SplashVC.init(viewModel: MarvelHeros.SplashViewModel) -&gt; MarvelHeros.SplashVC"
+                  moduleName = "MarvelHeros"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/Splash/ViewController/SplashVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D - 48b1f5ea4db5eb98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelHeros.SplashVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MarvelHeros.SplashVC&gt;"
+                  moduleName = "MarvelHeros"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/Splash/ViewController/SplashVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D - a13a6d167fe4a257"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelHeros.SplashVC.lottieAnimationView.getter : Swift.Optional&lt;Lottie.LottieAnimationView&gt;"
+                  moduleName = "MarvelHeros"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/Splash/ViewController/SplashVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D - fb3e11fe30754a4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelHeros.SplashVC.lottieAnimationView.setter : Swift.Optional&lt;Lottie.LottieAnimationView&gt;"
+                  moduleName = "MarvelHeros"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/Splash/ViewController/SplashVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D - 8ec00277c5d41078"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelHeros.SplashVC.lottieAnimationView.modify : Swift.Optional&lt;Lottie.LottieAnimationView&gt;"
+                  moduleName = "MarvelHeros"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/Splash/ViewController/SplashVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D - 5558aad16cae1c85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelHeros.SplashVC.lottieAnimationView.modify : Swift.Optional&lt;Lottie.LottieAnimationView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MarvelHeros"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "89ABD3F2-620C-449B-8D81-626D61D7A20D - c8ac274415ee77a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelHeros.SplashVC.lottieAnimationView.didset : Swift.Optional&lt;Lottie.LottieAnimationView&gt;"
+                  moduleName = "MarvelHeros"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/Splash/ViewController/SplashVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1890F32-333C-4C3A-B365-8855C51CFA67"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelHeros/Core/Coordinator/AppCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "goToHome()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

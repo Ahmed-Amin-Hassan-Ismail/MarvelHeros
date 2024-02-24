@@ -11,6 +11,16 @@ import UIKit
 
 final class SplashViewModel {
     
+    // MARK: - Properties
+    
+   private var coordinator: AppCoordinator!
+    
+    
+    // MARK: - Init
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
     
     // MARK: - Methods
     
@@ -19,6 +29,18 @@ final class SplashViewModel {
         view.animation = LottieAnimation.named("Animation")
         view.backgroundBehavior = .pauseAndRestore
         view.contentMode = .scaleAspectFill
+    }
+    
+    func startAnimation(view: LottieAnimationView) {
+        view.play { [weak self] completed in
+            if completed {
+                self?.goToHome()
+            }
+        }
+    }
+    
+  private func goToHome() {
+        coordinator.goToHome()
     }
     
 }

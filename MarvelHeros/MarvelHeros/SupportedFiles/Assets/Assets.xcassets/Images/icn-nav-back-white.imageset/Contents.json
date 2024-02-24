@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icn-nav-back-white.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

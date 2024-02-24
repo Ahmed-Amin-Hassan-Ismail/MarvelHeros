@@ -12,11 +12,18 @@ class SplashVC: UIViewController {
     
     // MARK: - Properties
     
-    private lazy var viewModel: SplashViewModel = {
-       let viewModel = SplashViewModel()
-        
-        return viewModel
-    }()
+    private var viewModel: SplashViewModel!
+    
+    // MARK: - Init
+    
+    init(viewModel: SplashViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - IBOutlets
     
@@ -27,29 +34,17 @@ class SplashVC: UIViewController {
     }
     
     
+    // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        lottieAnimationView.play { completed in
-            if completed {
-                UIApplication.shared.mainKeyWindow?.rootViewController = CharacterListVC.initializeWithNavigationController()
-            }
-        }
+        viewModel.startAnimation(view: lottieAnimationView)
     }
 
-}
-
-// MARK: - StoryboardMakeable
-
-extension SplashVC: StoryboardMakeable {
- 
-    typealias StoryboardType = SplashVC
-    static var storyboardName: String = Storyboard.spalsh
 }

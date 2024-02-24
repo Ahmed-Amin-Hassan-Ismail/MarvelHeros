@@ -10,4 +10,6 @@ import Foundation
 
 enum API {
     
+    static let characters = "/v1/public/characters"
+    
 }

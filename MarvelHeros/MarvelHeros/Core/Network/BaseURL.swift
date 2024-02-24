@@ -10,5 +10,5 @@ import Foundation
 
 enum BaseURL {
     
-    static let debug = ""
+    static let debug = "https://gateway.marvel.com"
 }

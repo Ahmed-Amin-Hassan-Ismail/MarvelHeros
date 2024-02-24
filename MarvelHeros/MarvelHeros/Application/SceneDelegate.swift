@@ -12,11 +12,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     private func setupViewController() {
-        let rootVC = SplashVC.initializeFromStoryboard()
-        self.window?.rootViewController = rootVC
+        let navigationController = MarvelNavigationController()
+        let appCoordinator = AppCoordinator(navCon: navigationController)
+        appCoordinator.start()
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
