@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     private func setupViewController() {
-        let navigationController = MarvelNavigationController()
+        let navigationController = UINavigationController()
         let appCoordinator = AppCoordinator(navCon: navigationController)
         appCoordinator.start()
         self.window?.rootViewController = navigationController

@@ -17,7 +17,7 @@ struct Batch: Codable {
     
     
     static var initial: Batch {
-       return Batch(offset: 0, limit: 30, total: Int.max, count: Int.max)
+       return Batch(offset: 0, limit: 10, total: Int.max, count: Int.max)
     }
     
     var hasNextPage: Bool {
@@ -25,6 +25,6 @@ struct Batch: Codable {
     }
     
     func next() -> Batch {
-       return Batch(offset: offset + count, limit: limit, total: total, count: count)
+       return Batch(offset: offset + 1, limit: limit + 10, total: total, count: count)
     }
 }

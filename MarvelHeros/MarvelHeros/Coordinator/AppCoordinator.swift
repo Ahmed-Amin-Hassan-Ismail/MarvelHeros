@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 final class AppCoordinator: Coordinator {
@@ -14,11 +15,11 @@ final class AppCoordinator: Coordinator {
     
     var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
-    var navigationController: MarvelNavigationController
+    var navigationController: UINavigationController
     
     // MARK: - Init
     
-    init(navCon : MarvelNavigationController) {
+    init(navCon : UINavigationController) {
         self.navigationController = navCon
     }
     

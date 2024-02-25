@@ -11,7 +11,7 @@ import RxAlamofire
 import Alamofire
 
 
-class NetworkManager: HTTPClient {
+class NetworkManager: APIClientProtocol {
     
     static var manager: NetworkManager {
         return NetworkManager()
@@ -19,21 +19,23 @@ class NetworkManager: HTTPClient {
     
     private init() { }
     
-    func request(endPoint: EndPoint) -> Observable<(response: HTTPURLResponse, data: Data)> {
+    func request(endPoint: EndPoint) -> Observable<Data> {
         URLSession.shared.rx
             .response(method: httpMethod(forEndPoint: endPoint),
                       endPoint.fullURL,
                       parameters: endPoint.fullParameter,
                       encoding: encoding(forEndPoint: endPoint),
                       headers: headers(endPoint: endPoint))
+            .map(handleHTTPURLResponse)
             .observe(on: MainScheduler.instance)
     }
 }
 
+// MARK: - PRIVATE METHODS
+
 extension NetworkManager {
     
-    
-    func httpMethod(forEndPoint endPoint: EndPoint) -> Alamofire.HTTPMethod {
+    private func httpMethod(forEndPoint endPoint: EndPoint) -> Alamofire.HTTPMethod {
         
         switch endPoint.method {
             
@@ -53,7 +55,7 @@ extension NetworkManager {
     }
     
     
-    func encoding(forEndPoint endPoint: EndPoint) -> Alamofire.ParameterEncoding {
+    private func encoding(forEndPoint endPoint: EndPoint) -> Alamofire.ParameterEncoding {
         
         if let encoding = endPoint.encoding {
             
@@ -73,7 +75,7 @@ extension NetworkManager {
         }
     }
     
-    func parameterEncoding(forAPIEncoding apiEncoding: APIEncoding) -> Alamofire.ParameterEncoding {
+    private func parameterEncoding(forAPIEncoding apiEncoding: APIEncoding) -> Alamofire.ParameterEncoding {
         
         switch apiEncoding {
             
@@ -89,7 +91,7 @@ extension NetworkManager {
         }
     }
     
-    func headers(endPoint: EndPoint) -> Alamofire.HTTPHeaders {
+    private func headers(endPoint: EndPoint) -> Alamofire.HTTPHeaders {
         
         var headers: HTTPHeaders = [:]
         
@@ -109,11 +111,20 @@ extension NetworkManager {
         
     }
     
-    func defaultHTTPHeaders() -> Alamofire.HTTPHeaders {
+    private func defaultHTTPHeaders() -> Alamofire.HTTPHeaders {
         
         return [
             "Content-Type":"application/json",
             "Accept":"application/json"
         ]
+    }
+    
+    private func handleHTTPURLResponse(response: HTTPURLResponse, data: Data) throws -> Data {
+        
+        guard response.statusCode >= 200 && response.statusCode <= 300 else {
+            throw URLError(.badServerResponse)
+        }
+        
+        return data
     }
 }

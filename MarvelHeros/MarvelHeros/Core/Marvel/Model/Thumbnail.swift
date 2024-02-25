@@ -7,27 +7,26 @@
 
 import Foundation
 
-//struct Thumbnail: Codable {
-//    
-//    var path: String?
-//    var pathExtension: String?
-//    
-//    enum CodingKeys: String, CodingKey {
-//        case path
-//        case pathExtension = "extension"
-//    }
-//
-//    func pathForType(type: ThumbnailType) -> String {
-//        return (path ?? "") + "/" + type.rawValue + "." + (pathExtension ?? "")
-//    }
-//}
-//
-//enum ThumbnailType: String {
-//   
-//   case PortraitSmall = "portrait_small"
-//   case PortraitMedium = "portrait_medium"
-//   case PortraitXlarge = "portrait_xlarge"
-//   case PortraitFantastic = "portrait_fantastic"
-//   case PortraitUncanny = "portrait_uncanny"
-//   case PortraitIncredible = "portrait_incredible"
-//}
+
+
+// MARK: - Thumbnail
+struct Thumbnail: Codable {
+    
+    let path: String
+    let thumbnailExtension: Extension
+    
+    var full: String {
+        return path + "." + thumbnailExtension.rawValue
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case path
+        case thumbnailExtension = "extension"
+    }
+}
+
+enum Extension: String, Codable {
+    case gif = "gif"
+    case jpg = "jpg"
+    case png = "png"
+}

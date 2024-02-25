@@ -1,5 +1,5 @@
 //
-//  Character.swift
+//  MarvelCharacter.swift
 //  MarvelHeros
 //
 //  Created by Ahmed Amin on 24/02/2024.
@@ -7,34 +7,11 @@
 
 import Foundation
 
-//struct Character: Codable {
-//    var id: Int?
-//    var name: String
-//    var thumbnail: Thumbnail?
-//}
 
+// MARK: - Character
 
-
-// MARK: - CharacterModel
-
-struct CharacterModel: Codable {
+struct MarvelCharacter: Codable {
     
-    var code: Int?
-    var status, copyright, attributionText, attributionHTML: String?
-    var etag: String?
-    var data: DataClass?
-}
-
-// MARK: - DataClass
-
-struct DataClass: Codable {
-    
-    var offset, limit, total, count: Int?
-    var results: [Character]?
-}
-
-// MARK: - Result
-struct Character: Codable {
     let id: Int
     let name, description: String
     let thumbnail: Thumbnail
@@ -46,6 +23,7 @@ struct Character: Codable {
 }
 
 // MARK: - Comics
+
 struct Comics: Codable {
     let available: Int
     let collectionURI: String
@@ -54,12 +32,14 @@ struct Comics: Codable {
 }
 
 // MARK: - ComicsItem
+
 struct ComicsItem: Codable {
     let resourceURI: String
     let name: String
 }
 
 // MARK: - Stories
+
 struct Stories: Codable {
     let available: Int
     let collectionURI: String?
@@ -68,6 +48,7 @@ struct Stories: Codable {
 }
 
 // MARK: - StoriesItem
+
 struct StoriesItem: Codable {
     let resourceURI: String?
     let name: String?
@@ -97,24 +78,8 @@ enum ItemType: String, Codable {
     
 }
 
-// MARK: - Thumbnail
-struct Thumbnail: Codable {
-    let path: String
-    let thumbnailExtension: Extension
-
-    enum CodingKeys: String, CodingKey {
-        case path
-        case thumbnailExtension = "extension"
-    }
-}
-
-enum Extension: String, Codable {
-    case gif = "gif"
-    case jpg = "jpg"
-    case png = "png"
-}
-
 // MARK: - URLElement
+
 struct URLElement: Codable {
     let type: URLType
     let url: String
