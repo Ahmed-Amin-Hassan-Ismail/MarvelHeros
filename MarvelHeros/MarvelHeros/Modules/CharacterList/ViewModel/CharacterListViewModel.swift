@@ -40,6 +40,10 @@ final class CharacterListViewModel {
         }
     }
     
+    func goToCharacterSearch() {
+        coordinator.goToCharacterSearch(with: characterDataItemsRelay.value)
+    }
+    
     func goToCharacterDetails(with item: MarvelCharacter) {
         coordinator.goToCharacterDetails(with: item)
     }

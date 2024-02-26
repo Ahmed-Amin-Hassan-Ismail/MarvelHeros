@@ -8,11 +8,12 @@
 import UIKit
 import RxSwift
 
-class CharacterListVC: RXViewController {
+class CharacterListVC: UIViewController {
     
     // MARK: - Properties
     
     private var viewModel: CharacterListViewModel!
+    private let disposeBag = DisposeBag()
     
     private lazy var viewSpinner: UIView = {
         let view = UIView(frame: CGRect(
@@ -60,8 +61,40 @@ class CharacterListVC: RXViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addNavBarImage()
         bind()
+    }
+}
+
+// MARK: - SETUP Navigation bar
+
+extension CharacterListVC {
+    
+    private func addNavBarImage() {
+        let navController = navigationController!
+        let image = UIImage(named: "icn-nav-marvel")
+        let imageView = UIImageView(image: image)
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+        let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
+        let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+        navigationItem.rightBarButtonItem = searchButton()
+        navigationItem.setHidesBackButton(true, animated: true)
+        
+    }
+    
+    private func searchButton() -> UIBarButtonItem {
+        UIBarButtonItem(image: UIImage(named: "icn-nav-search")?.withRenderingMode(.alwaysOriginal),
+                        style: .plain,
+                        target: self,
+                        action: #selector(searchButtonTapped))
+    }
+    
+    @objc private func searchButtonTapped(_ sender: Any) {
+        viewModel.goToCharacterSearch()
     }
 }
  

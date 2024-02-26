@@ -46,6 +46,12 @@ final class AppCoordinator: Coordinator {
         viewController.modalPresentationStyle = .fullScreen
         navigationController.present(viewController, animated: true)
     }
+    
+    func goToCharacterSearch(with items: [MarvelCharacter]) {
+        let viewModel = CharacterSearchViewModel(items: items, coordinator: self)
+        let viewController = CharacterSearchVC(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 // MARK: - Private Methods
