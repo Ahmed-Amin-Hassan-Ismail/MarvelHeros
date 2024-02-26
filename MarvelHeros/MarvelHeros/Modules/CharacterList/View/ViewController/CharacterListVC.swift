@@ -101,8 +101,9 @@ extension CharacterListVC {
             cell.configure(model: character)
         }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(MarvelCharacter.self).subscribe(onNext: { item in
-            print("SelectedItem: \(item.name)")
+        tableView.rx.modelSelected(MarvelCharacter.self).subscribe(onNext: { [weak self] item in
+           
+            self?.viewModel.goToCharacterDetails(with: item)
         }).disposed(by: disposeBag)
         
         tableView.rx.didScroll.subscribe { [weak self] _ in
@@ -113,7 +114,7 @@ extension CharacterListVC {
             
             if offSetY > (contentHeight - self.tableView.frame.size.height - 100) {
                 
-                viewModel.fetchMoreCharacters()
+                self.viewModel.fetchMoreCharacters()
             }
         }
         .disposed(by: disposeBag)

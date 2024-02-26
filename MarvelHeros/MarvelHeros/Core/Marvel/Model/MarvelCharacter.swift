@@ -25,6 +25,7 @@ struct MarvelCharacter: Codable {
 // MARK: - Comics
 
 struct Comics: Codable {
+    var name: String?
     let available: Int
     let collectionURI: String
     let items: [ComicsItem]

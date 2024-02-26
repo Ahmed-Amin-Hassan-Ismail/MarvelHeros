@@ -33,6 +33,12 @@ final class AppCoordinator: Coordinator {
         let viewController = CharacterListVC(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func goToCharacterDetails(with item: MarvelCharacter) {
+        let viewModel = CharacterDetailsViewModel(with: item, coordinator: self)
+        let viewController = CharacterDetailsVC(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 // MARK: - Private Methods

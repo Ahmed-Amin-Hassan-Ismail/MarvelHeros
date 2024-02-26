@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MediaCollectionViewCell" id="PtK-Tv-pEi" customClass="MediaCollectionViewCell" customModule="MarvelHeros" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="186"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="186"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lp-RS-yfD">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="186"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PkA-As-wdg">
+                                <rect key="frame" x="0.0" y="0.0" width="231" height="186"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RhH-tK-dAQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="231" height="148.66666666666666"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iron Man" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4k-V1-iyr">
+                                        <rect key="frame" x="0.0" y="148.66666666666666" width="231" height="37.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RhH-tK-dAQ" firstAttribute="height" secondItem="PkA-As-wdg" secondAttribute="height" multiplier="0.8" id="ibf-kO-Rwm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.2470588235" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PkA-As-wdg" firstAttribute="leading" secondItem="4lp-RS-yfD" secondAttribute="leading" id="CSR-r3-zU4"/>
+                            <constraint firstAttribute="trailing" secondItem="PkA-As-wdg" secondAttribute="trailing" id="VTJ-BE-8zP"/>
+                            <constraint firstItem="PkA-As-wdg" firstAttribute="top" secondItem="4lp-RS-yfD" secondAttribute="top" id="mKe-dq-j0m"/>
+                            <constraint firstAttribute="bottom" secondItem="PkA-As-wdg" secondAttribute="bottom" id="wBV-An-DBb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="Jsh-C9-PMD"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4lp-RS-yfD" secondAttribute="bottom" id="DK2-GF-LlV"/>
+                <constraint firstAttribute="trailing" secondItem="4lp-RS-yfD" secondAttribute="trailing" id="McH-2R-N4u"/>
+                <constraint firstItem="4lp-RS-yfD" firstAttribute="top" secondItem="PtK-Tv-pEi" secondAttribute="top" id="emY-N2-LbO"/>
+                <constraint firstItem="4lp-RS-yfD" firstAttribute="leading" secondItem="PtK-Tv-pEi" secondAttribute="leading" id="x84-Xc-nox"/>
+            </constraints>
+            <size key="customSize" width="231" height="186"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="comicImageView" destination="RhH-tK-dAQ" id="baI-zg-IBu"/>
+                <outlet property="nameLabel" destination="q4k-V1-iyr" id="iru-hM-UMN"/>
+            </connections>
+            <point key="canvasLocation" x="36" y="20"/>
+        </collectionViewCell>
+    </objects>
+</document>

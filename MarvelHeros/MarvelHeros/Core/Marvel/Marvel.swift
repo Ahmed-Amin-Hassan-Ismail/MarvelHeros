@@ -40,3 +40,29 @@ struct Marvel {
         return parameters
     }
 }
+
+
+struct MockURLImages: Codable {
+    static let urls = [
+        "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/6/20/52602f21f29ec.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/9/50/4ce18691cbf04.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/1/b0/5269678709fb7.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/9/30/535feab462a64.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/3/80/4c00358ec7548.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/1/b0/5269678709fb7.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/9/30/535feab462a64.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/3/80/4c00358ec7548.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/1/b0/5269678709fb7.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/9/30/535feab462a64.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/3/80/4c00358ec7548.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+        "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
+    ]
+}

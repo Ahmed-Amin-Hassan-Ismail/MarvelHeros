@@ -40,6 +40,10 @@ final class CharacterListViewModel {
         }
     }
     
+    func goToCharacterDetails(with item: MarvelCharacter) {
+        coordinator.goToCharacterDetails(with: item)
+    }
+    
     private func bind() {
         
         fetchCharacterList(batch: batch)
@@ -83,7 +87,7 @@ final class CharacterListViewModel {
             }, onCompleted: {
                 self.isLoadingSpinnerAvaliable.onNext(false)
                 self.refreshControlCompelted.onNext(())
-            })            
+            })
             .disposed(by: disposeBag)
     }
     
