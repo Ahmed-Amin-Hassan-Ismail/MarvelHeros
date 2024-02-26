@@ -11,26 +11,26 @@ import RxSwift
 class RXViewController: UIViewController {
     
     let disposeBag = DisposeBag()
-   
+    
     override func viewDidLoad() {
-       super.viewDidLoad()
+        super.viewDidLoad()
         addNavBarImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       super.viewDidAppear(animated)
+        super.viewDidAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-       super.viewWillDisappear(animated)
+        super.viewWillDisappear(animated)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-       super.viewDidDisappear(animated)
+        super.viewDidDisappear(animated)
     }
     
     private func addNavBarImage() {
@@ -44,6 +44,19 @@ class RXViewController: UIViewController {
         imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
+        navigationItem.rightBarButtonItem = searchButton()
         navigationItem.setHidesBackButton(true, animated: true)
+        
+    }
+    
+    private func searchButton() -> UIBarButtonItem {
+        UIBarButtonItem(image: UIImage(named: "icn-nav-search")?.withRenderingMode(.alwaysOriginal),
+                        style: .plain,
+                        target: self,
+                        action: #selector(searchButtonTapped))
+    }
+    
+    @objc private func searchButtonTapped(_ sender: Any) {
+        print("Search bar tapped")
     }
 }

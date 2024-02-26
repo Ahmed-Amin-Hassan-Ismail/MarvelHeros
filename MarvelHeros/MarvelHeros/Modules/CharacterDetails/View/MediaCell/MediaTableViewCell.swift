@@ -56,6 +56,7 @@ extension MediaTableViewCell {
         .disposed(by: disposeBag)
         
         collectionView.rx.modelSelected(ComicsItem.self).subscribe { [weak self] item in
+            #warning("need to fix")
             self?.selectedCharacter.onNext(item)
         }
         .disposed(by: disposeBag)
