@@ -49,14 +49,13 @@ extension MediaTableViewCell {
        
         items.bind(to: collectionView.rx.items(cellIdentifier: MediaCollectionViewCell.identifier, cellType: MediaCollectionViewCell.self)) {
             (row, item, cell) in
-            var updatedItem = item
-            updatedItem.url = MockURLImages.urls.shuffled()[row]
-            cell.configure(with: updatedItem)
+            item.url = MockURLImages.urls.shuffled()[row]
+            cell.configure(with: item)
         }
         .disposed(by: disposeBag)
         
         collectionView.rx.modelSelected(ComicsItem.self).subscribe { [weak self] item in
-            #warning("need to fix")
+            
             self?.selectedCharacter.onNext(item)
         }
         .disposed(by: disposeBag)

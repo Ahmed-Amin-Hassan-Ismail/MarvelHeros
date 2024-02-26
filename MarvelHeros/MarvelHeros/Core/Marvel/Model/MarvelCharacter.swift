@@ -34,7 +34,7 @@ struct Comics: Codable {
 
 // MARK: - ComicsItem
 
-struct ComicsItem: Codable {
+class ComicsItem: Codable {
     let resourceURI: String
     let name: String
     var url: String?
