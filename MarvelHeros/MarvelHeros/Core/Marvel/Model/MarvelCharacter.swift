@@ -37,6 +37,7 @@ struct Comics: Codable {
 struct ComicsItem: Codable {
     let resourceURI: String
     let name: String
+    var url: String?
 }
 
 // MARK: - Stories

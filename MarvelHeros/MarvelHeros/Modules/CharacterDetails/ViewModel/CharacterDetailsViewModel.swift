@@ -40,4 +40,9 @@ final class CharacterDetailsViewModel {
         let values = [comics, series, events]
         marvelSections.accept(values)
     }
+    
+    func goToCharacterImage(with item: ComicsItem) {
+        
+        coordinator.goToCharacterImage(with: item)
+    }
 }

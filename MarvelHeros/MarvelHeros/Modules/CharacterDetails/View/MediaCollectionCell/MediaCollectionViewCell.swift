@@ -29,9 +29,9 @@ class MediaCollectionViewCell: UICollectionViewCell {
 
 extension MediaCollectionViewCell {
     
-    func configure(with item: ComicsItem, url: String) {
+    func configure(with item: ComicsItem) {
         nameLabel.text = item.name
-        if let url = URL(string: url) {
+        if let url = URL(string: item.url ?? "") {
             comicImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
             comicImageView.sd_imageIndicator?.startAnimatingIndicator()
             comicImageView.sd_setImage(with: url,

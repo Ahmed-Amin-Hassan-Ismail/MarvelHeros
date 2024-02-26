@@ -14,6 +14,7 @@ class MediaTableViewCell: UITableViewCell {
      // MARK: - Properties
     static let identifier = "MediaTableViewCell"
     private let disposeBag = DisposeBag()
+    let selectedCharacter = PublishSubject<ComicsItem>()
     
     // MARK: Outlets
 
@@ -48,12 +49,14 @@ extension MediaTableViewCell {
        
         items.bind(to: collectionView.rx.items(cellIdentifier: MediaCollectionViewCell.identifier, cellType: MediaCollectionViewCell.self)) {
             (row, item, cell) in
-            cell.configure(with: item, url: MockURLImages.urls.shuffled()[row])
+            var updatedItem = item
+            updatedItem.url = MockURLImages.urls.shuffled()[row]
+            cell.configure(with: updatedItem)
         }
         .disposed(by: disposeBag)
         
-        collectionView.rx.modelSelected(ComicsItem.self).subscribe { item in
-            print("item has been selected")
+        collectionView.rx.modelSelected(ComicsItem.self).subscribe { [weak self] item in
+            self?.selectedCharacter.onNext(item)
         }
         .disposed(by: disposeBag)
     }

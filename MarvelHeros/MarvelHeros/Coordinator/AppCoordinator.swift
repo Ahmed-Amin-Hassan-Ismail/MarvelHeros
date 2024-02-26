@@ -39,6 +39,13 @@ final class AppCoordinator: Coordinator {
         let viewController = CharacterDetailsVC(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func goToCharacterImage(with item: ComicsItem) {
+        let viewModel = CharacterImageViewModel(item: item, coordinator: self)
+        let viewController = CharacterImageVC(viewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+        navigationController.present(viewController, animated: true)
+    }
 }
 
 // MARK: - Private Methods

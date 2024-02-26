@@ -74,8 +74,13 @@ extension CharacterDetailsVC {
         tableView.register(UINib(nibName: MediaTableViewCell.identifier, bundle: nil),
                            forCellReuseIdentifier: MediaTableViewCell.identifier)
         
-        viewModel.marvelSections.bind(to: tableView.rx.items(cellIdentifier: MediaTableViewCell.identifier, cellType: MediaTableViewCell.self)) { (row, item, cell) in
+        viewModel.marvelSections.bind(to: tableView.rx.items(cellIdentifier: MediaTableViewCell.identifier, cellType: MediaTableViewCell.self)) { [weak self] (row, item, cell) in
+            guard let self else { return }
             cell.configure(name: item.name ?? "", items: BehaviorRelay(value: item.items))
+            cell.selectedCharacter.subscribe {[weak self] item in
+                self?.viewModel.goToCharacterImage(with: item)
+            }
+            .disposed(by: self.disposeBag)
         }
         .disposed(by: disposeBag)
     }

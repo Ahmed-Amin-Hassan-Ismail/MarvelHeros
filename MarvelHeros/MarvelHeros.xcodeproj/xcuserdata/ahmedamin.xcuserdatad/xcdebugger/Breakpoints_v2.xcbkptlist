@@ -7,79 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "326AB6C8-4D3E-4FA3-9802-BDAB352AC28F"
+            uuid = "0F63E1C7-3CA7-48E4-8484-F57FAC7950B7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MarvelHeros/Modules/CharacterDetails/View/MediaCollectionCell/MediaCollectionViewCell.swift"
+            filePath = "MarvelHeros/Modules/CharacterImage/ViewController/CharacterImageVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "configure(with:url:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "setupView()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "326AB6C8-4D3E-4FA3-9802-BDAB352AC28F - d7ea67d6a7756fa5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MarvelHeros.MediaCollectionViewCell.configure(with: MarvelHeros.ComicsItem) -&gt; ()"
-                  moduleName = "MarvelHeros"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/CharacterDetails/View/MediaCollectionCell/MediaCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "452">
-               </Location>
-               <Location
-                  uuid = "326AB6C8-4D3E-4FA3-9802-BDAB352AC28F - d7ea67d6a7756fa5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MarvelHeros.MediaCollectionViewCell.configure(with: MarvelHeros.ComicsItem) -&gt; ()"
-                  moduleName = "MarvelHeros"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/CharacterDetails/View/MediaCollectionCell/MediaCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "472">
-               </Location>
-               <Location
-                  uuid = "326AB6C8-4D3E-4FA3-9802-BDAB352AC28F - d7ea67d6a7756fa5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MarvelHeros.MediaCollectionViewCell.configure(with: MarvelHeros.ComicsItem) -&gt; ()"
-                  moduleName = "MarvelHeros"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/CharacterDetails/View/MediaCollectionCell/MediaCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "444">
-               </Location>
-               <Location
-                  uuid = "326AB6C8-4D3E-4FA3-9802-BDAB352AC28F - d7ea67d6a7756fa5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MarvelHeros.MediaCollectionViewCell.configure(with: MarvelHeros.ComicsItem) -&gt; ()"
-                  moduleName = "MarvelHeros"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedamin/Desktop/GitHub%20Projects/MarvelHeros/MarvelHeros/MarvelHeros/Modules/CharacterDetails/View/MediaCollectionCell/MediaCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "496">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
