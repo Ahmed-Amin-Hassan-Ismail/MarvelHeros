@@ -43,7 +43,8 @@ This app has a sWift package manager dependency, so after the download you must 
 
 ## Developers
 
-/Users/ahmedamin/Desktop/Simulator Screen Recording - iPhone 15 Pro - 2024-02-26 at 22.53.55.gif
+![SimulatorScreenRecording-iPhone15Pro-2024-02-26at23 30 44-ezgif com-optimize](https://github.com/Ahmed-Amin-Hassan-Ismail/MarvelHeros/assets/82684071/eefbeab3-0e62-497b-a056-90687434258e)
+
 
  
 ## Development Environment
